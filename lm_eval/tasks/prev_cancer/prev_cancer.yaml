@@ -1,12 +1,12 @@
-task: PreviousHxCancer
-dataset_path: jsonl
-dataset_name: prevca
+task: prev_cancer
+dataset_path: json
+dataset_name: null
 dataset_kwargs:
-  data_files: previousca_data.jsonl
+  data_files: ./lm_eval/tasks/prev_cancer/samples.jsonl
 output_type: multiple_choice
-training_split: train
-validation_split: validation
-test_split: test
+training_split: null
+validation_split: train
+test_split: null
 doc_to_text: !function pp_prevca.doc_to_text
 doc_to_target: !function pp_prevca.doc_to_target
 doc_to_choice: ['A','B', 'C']
