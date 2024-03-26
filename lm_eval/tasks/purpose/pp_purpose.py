@@ -3,7 +3,7 @@ def doc_to_text(doc) -> str:
     option_choices = doc["options"]
     answers = "".join(f"{k}. {v}\n" for k, v in option_choices.items())
     # Create the prompt with the report and the options
-    return f"{doc['report']}\nQuestion: Does the patient have a personal history of cancer?\n{answers}Answer:"
+    return f"{doc['report']}\nQuestion: What was the purpose of the imaging study?\n{answers}Answer:"
 
 def doc_to_target(doc) -> str:
     # Return the correct answer's index/label (e.g., 'A')

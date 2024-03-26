@@ -1,5 +1,5 @@
 group: birads
-  task: prev_cancer
+  task: breast_density
 dataset_path: json
 dataset_name: null
 dataset_kwargs:
@@ -8,9 +8,9 @@ output_type: multiple_choice
 training_split: null
 validation_split: train
 test_split: null
-doc_to_text: !function pp_prevca.doc_to_text
-doc_to_target: !function pp_prevca.doc_to_target
-doc_to_choice: ['A','B', 'C']
+doc_to_text: !function pp_breast_density.doc_to_text
+doc_to_target: !function pp_breast_density.doc_to_target
+doc_to_choice: ['A','B', 'C', 'D', 'E', 'F']
 metric_list:
   - metric: acc
     aggregation: mean
