@@ -9,7 +9,7 @@ from lm_eval.logging_utils import WandbLogger
 @patch
 def _generate_dataset(self: WandbLogger, data: List[Dict[str,Any]], config: Dict[str, Any]) -> pd.DataFrame:    
     def _obfuscate(field_value: str) -> str:
-        return field_value[:15] + '*'*(len(field_value) - 10)
+        return field_value[:60] + '*'*(len(field_value) - 60)
 
     ids = [x['doc_id'] for x in data]
     labels = [x['target'] for x in data]
@@ -100,11 +100,11 @@ model_args_dict = {
 results = lm_eval.simple_evaluate(
     model='hf',
     model_args=model_args_dict,
-    tasks=['bpe','prev_cancer','menopausal_status','breast_density','modality','purpose']
+    tasks=['is_pnet']
 )
 
 wandb_logger = WandbLogger(
-    project='birads-eval-v1', job_type='eval'
+    project='pnet-eval-v1', job_type='eval'
 )
 
 wandb_logger.post_init(results)
