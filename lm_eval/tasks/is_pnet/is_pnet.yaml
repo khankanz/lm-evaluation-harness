@@ -3,7 +3,7 @@ task: is_pnet
 dataset_path: json
 dataset_name: null
 dataset_kwargs:
-  data_files: scratch/scratch01/amgrp/zkhan/rad_report_query/is_pnet_data.jsonl
+  data_files: /exa01/project/amgrp/zkhan/rad_report_query/is_pnet_data.jsonl
 output_type: multiple_choice
 training_split: null
 validation_split: train
