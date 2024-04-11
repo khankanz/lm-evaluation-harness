@@ -1,9 +1,9 @@
 group: birads
-  task: breast_density
+task: breast_density
 dataset_path: json
 dataset_name: null
 dataset_kwargs:
-  data_files: sample.jsonl
+  data_files: /exa01/project/amgrp/zkhan/evaluation_birads/density_data.jsonl
 output_type: multiple_choice
 training_split: null
 validation_split: train

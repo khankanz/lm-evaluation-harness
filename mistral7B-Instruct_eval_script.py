@@ -91,8 +91,8 @@ def _generate_dataset(self: WandbLogger, data: List[Dict[str,Any]], config: Dict
 
 results = lm_eval.simple_evaluate(
     model='hf',
-    model_args='mistralai/Mistral-7B-Instruct-v0.2',
-    tasks=['bpe','prev_cancer','menopausal_status','breast_density','modality','purpose'],
+    model_args='pretrained=mistralai/Mistral-7B-Instruct-v0.2',
+    tasks=['bpe','prev_cancer','menopausal_status','breast_density','modality','purpose']
 )
 
 wandb_logger = WandbLogger(

@@ -1,9 +1,9 @@
 group: birads
-  task: bpe
+task: bpe
 dataset_path: json
 dataset_name: null
 dataset_kwargs:
-  data_files: sample.jsonl
+  data_files: /exa01/project/amgrp/zkhan/evaluation_birads/bpe_data.jsonl
 output_type: multiple_choice
 training_split: null
 validation_split: train
