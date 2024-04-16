@@ -1,0 +1,20 @@
+group: birads
+task: pp_microcalcification
+dataset_path: json
+dataset_name: null
+dataset_kwargs:
+  data_files: /exa01/project/amgrp/zkhan/calcifications_data.jsonl
+output_type: multiple_choice
+training_split: null
+validation_split: train
+test_split: null
+doc_to_text: !function pp_microcalcification.doc_to_text
+doc_to_target: !function pp_microcalcification.doc_to_target
+doc_to_choice: ['A','B', 'C']
+metric_list:
+  - metric: acc
+    aggregation: mean
+    higher_is_better: true
+  - metric: acc_norm
+    aggregation: mean
+    higher_is_better: true
